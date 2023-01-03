@@ -1,0 +1,126 @@
+#This file is a list of instructions to the VM once it starts asking for input characters
+#The instructions in this file will be used until they run out, when the user can type the next instructions if required
+#The codes are also recorded here
+#First code is in the architectural specification    -    WAVnxqIyblPQ
+#Second code is displayed when the VM is able to run using a minimal instruction set    -   DZzsWkpjlyIq
+#and the third code is printed above when the self test is completed and the VM is fully operational (we hope)   -   NXAmQBTRWUez
+#Some special characters in this file including this one (@) that causes a pause of 60 seconds
+#The ~ character causes the VM to return to user input and ignore any following instructions (useful for debugging this script)
+#The $ character instructs the VM to stop as we have finished the challenge
+#The @ character will cause the VM to pause for 15 seconds
+#The < character will cause the VM to slow down printing of output (you can also set this in the call to the class constructor)
+#And a > character will speed it up again
+#The ^ character will cause a dump of the current program code
+#And the { and } characters will start and stop an ip trace which will saved at the end of the program when you send a $ instruction
+#Finally, the [ and ] characters will start and stop a FULL trace of a section on code in the VM - be warned, lots of outout to console!
+take tablet
+#And here is the fourth code   -   BigyjNDgeIRT
+use tablet
+doorway
+north
+north
+bridge
+continue
+down
+east
+take empty lantern
+west
+west
+passage
+ladder
+west
+south
+#And here is the fifth code   -   bQmIVnBigCft
+north
+take can
+use can
+use lantern
+west
+ladder
+darkness
+continue
+west
+west
+west
+west
+north
+take red coin
+look red coin
+north
+east
+take concave coin
+look concave coin
+down
+take corroded coin
+look corroded coin
+up
+west
+west
+take blue coin
+look blue coin
+up
+take shiny coin
+look shiny coin
+down
+east
+#solve_coin_puzzle() Invoked the helper function (=) which will use the coins in the correct order to solve the equation given in the puzzle, i.e.
+#use blue coin
+#use red coin
+#use shiny coin
+#use concave coin
+#use corroded coin
+=
+north
+take teleporter
+use teleporter
+#This gives us out sixth code  -   ROJYdUjILufS
+take business card
+look business card
+take strange book
+look strange book
+#This tells the VM to do some code fixups to make the teleporter work; the fixups are set out in the VM code itself in the pin function
+!
+use teleporter
+#And here is our seventh code  -   uDTvMgkFRJme
+north
+north
+north
+north
+north
+north
+north
+east
+take journal
+look journal
+west
+north
+north
+take orb
+#You are in a grid that looks like this and you need to find a sum moving from bottom left and ending top right that takes you from 22 to 30
+#|-----|-----|-----|-----|
+#|  *  |  8  |  -  |  1  |
+#|-----|-----|-----|-----|
+#|  4  |  *  | 11  |  *  |
+#|-----|-----|-----|-----|
+#|  +  |  4  |  -  | 18  |
+#|-----|-----|-----|-----|
+#| 22  |  -  |  9  |  *  |
+#|-----|-----|-----|-----|
+#So my solution is 22+4-11*4-18-11-1 = 30  (running total is calculated after each operation; no order of precedence)
+north
+east
+east
+north
+west
+south
+east
+east
+west
+north
+north
+east
+vault
+take mirror
+use mirror
+#Success! Here is the final code  -  wOMwOvMWd8wA  ; but it is a mirror image so we have to reverse it to get  -  Aw8bWMvOwMOw
+$
